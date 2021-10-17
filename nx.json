@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZDRiNjE1OTEtNDNlMi00OWUwLWIyNjYtZTgxNWM3N2ZhZjFlfHJlYWQtd3JpdGU="
       }
     }
@@ -39,14 +34,19 @@
     "api-interfaces": {
       "tags": []
     },
+    "book": {
+      "tags": ["project:apps/book", "platform:angular"]
+    },
+    "book-e2e": {
+      "tags": [],
+      "implicitDependencies": ["book"]
+    },
     "test": {
       "tags": []
     },
     "test-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "test"
-      ]
+      "implicitDependencies": ["test"]
     }
   }
 }
